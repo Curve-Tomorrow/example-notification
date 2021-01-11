@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {
+  ILocalNotification,
+  LocalNotifications,
+} from '@ionic-native/local-notifications/ngx';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +10,29 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  numOfNotifications = 20;
+  intervalInMinutes = 1;
 
-  constructor() {}
+  constructor(private localNotification: LocalNotifications) {}
 
+  schedule() {
+    const now = Date.now();
+    let notifications: ILocalNotification[] = [];
+
+    for (let i = 0; i < this.numOfNotifications; i++) {
+      const id = i + 1;
+      const time = new Date(now + id * 60_000);
+      notifications.push({
+        id,
+        title: `Test ${id}`,
+        text: `Expected at ${time.toLocaleString()}`,
+        trigger: { at: time },
+      });
+    }
+    this.localNotification.schedule(notifications);
+  }
+
+  async cancelAll() {
+    await this.localNotification.cancelAll();
+  }
 }
