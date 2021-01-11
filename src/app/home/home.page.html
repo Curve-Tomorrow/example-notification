@@ -43,9 +43,10 @@
     <ion-button
       color="primary"
       expand="block"
-      [disabled]="form.invalid || $any(form.controls.intervalInMinutes.value) < 1 || $any(form.controls.numOfNotifications.value) < 1"
+      [disabled]="form.invalid || $any(form.controls.intervalInMinutes?.value) < 1 || $any(form.controls.numOfNotifications?.value) < 1"
+      (click)="schedule()"
       >Schedule {{numOfNotifications}}</ion-button
     >
-    <ion-button color="danger" expand="block">Cancel All</ion-button>
+    <ion-button color="danger" expand="block" (click)="cancelAll()">Cancel All</ion-button>
   </div>
 </ion-content>

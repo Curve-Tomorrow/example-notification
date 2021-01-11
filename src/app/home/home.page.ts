@@ -26,6 +26,7 @@ export class HomePage {
         id,
         title: `Test ${id}`,
         text: `Expected at ${time.toLocaleString()}`,
+        foreground: true,
         trigger: { at: time },
       });
     }
