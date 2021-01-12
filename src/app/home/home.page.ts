@@ -21,7 +21,7 @@ export class HomePage {
 
     for (let i = 0; i < this.numOfNotifications; i++) {
       const id = i + 1;
-      const time = new Date(now + this.intervalInMinutes * 60_000);
+      const time = new Date(now + id * this.intervalInMinutes * 60_000);
       notifications.push({
         id,
         title: `Test ${id}`,
