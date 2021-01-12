@@ -37,6 +37,21 @@
             [(ngModel)]="intervalInMinutes"
           ></ion-input>
         </ion-item>
+        <ion-item>
+          <ion-label>Priority</ion-label>
+          <ion-select
+            name="priority"
+            type="number"
+            required
+            [(ngModel)]="priority"
+          >
+          <ion-select-option [value]="-2">Min</ion-select-option>
+          <ion-select-option [value]="-1">Low</ion-select-option>
+          <ion-select-option [value]="0">Default</ion-select-option>
+          <ion-select-option [value]="1">High</ion-select-option>
+          <ion-select-option [value]="2">Max</ion-select-option>
+        </ion-select>
+        </ion-item>
       </ion-list>
     </form>
 

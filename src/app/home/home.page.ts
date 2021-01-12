@@ -12,6 +12,7 @@ import {
 export class HomePage {
   numOfNotifications = 20;
   intervalInMinutes = 1;
+  priority = 0;
 
   constructor(private localNotification: LocalNotifications) {}
 
@@ -28,6 +29,7 @@ export class HomePage {
         text: `Expected at ${time.toLocaleString()}`,
         foreground: true,
         trigger: { at: time },
+        priority: this.priority,
       });
     }
     this.localNotification.schedule(notifications);
