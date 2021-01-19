@@ -44,8 +44,8 @@
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
-    "cordova-plugin-ionic-webview": "^4.2.1",
-    "cordova-plugin-local-notification": "git+https://github.com/katzer/cordova-plugin-local-notifications.git#caff55ec758fdf298029ae98aff7f6a8a097feac",
+    "cordova-plugin-ionic-webview": "^5.0.0",
+    "cordova-plugin-local-notification": "git+https://github.com/timkellypa/cordova-plugin-local-notifications.git",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
@@ -68,13 +68,8 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {
-        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-      },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-local-notification": {
-        "ANDROID_SUPPORT_V4_VERSION": "26.+"
-      }
+      "cordova-plugin-ionic-webview": {}
     },
     "platforms": [
       "android",
