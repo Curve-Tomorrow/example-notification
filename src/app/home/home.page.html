@@ -52,7 +52,11 @@
           <ion-select-option [value]="2">Max</ion-select-option>
         </ion-select>
         </ion-item>
+        <ion-item>
+          <ion-label>Battery Optimisation ({{batteryOptimisation}})</ion-label>
+        </ion-item>
       </ion-list>
+      <ion-button color="primary" (click)="requestIgnoreBatteryOptimisation()">Request to ignore</ion-button>
     </form>
 
     <ion-button
