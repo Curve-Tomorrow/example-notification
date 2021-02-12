@@ -149,6 +149,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-badge/exampleNotfications-badge.gradle"
 apply from: "../cordova-plugin-local-notification/exampleNotfications-localnotification.gradle"
+apply from: "../cordova-plugin-fcm-with-dependecy-updated/exampleNotfications-FCMPlugin.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()

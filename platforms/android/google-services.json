@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "91117473708",
+    "project_id": "example-notification-145a9",
+    "storage_bucket": "example-notification-145a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91117473708:android:94c06654b5e7e92916f409",
+        "android_client_info": {
+          "package_name": "au.com.curve.exampleNotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91117473708-82nts5ticekf08p11l3639j3d3753gor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaO8GC9xKKhCGSK63nMSKuooqXhC2hS5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91117473708-82nts5ticekf08p11l3639j3d3753gor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
