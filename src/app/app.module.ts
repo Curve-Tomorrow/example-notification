@@ -1,3 +1,4 @@
+import { AlertService } from './../services/alert/alert.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -9,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { PushNotificationService } from '../services/push-notifications/push-notification.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +21,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     LocalNotifications,
+    PushNotificationService,
+    AlertService
   ],
   bootstrap: [AppComponent],
 })
