@@ -173,7 +173,7 @@
 
       var _ionic_native_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @ionic-native/core */
-      "./plugins/cordova-plugin-fcm-with-dependecy-updated/ionic/node_modules/@ionic-native/core/index.js");
+      "./plugins/cordova-plugin-fcm-with-dependecy-updated/ionic/ngx/node_modules/@ionic-native/core/index.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
