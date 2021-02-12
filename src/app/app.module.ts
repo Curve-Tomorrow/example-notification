@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { PushNotificationService } from '../services/push-notifications/push-notification.service';
+import { FCM } from '../../plugins/cordova-plugin-fcm-with-dependecy-updated/ionic/ngx/FCM';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,8 @@ import { PushNotificationService } from '../services/push-notifications/push-not
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     LocalNotifications,
     PushNotificationService,
-    AlertService
+    AlertService,
+    FCM
   ],
   bootstrap: [AppComponent],
 })

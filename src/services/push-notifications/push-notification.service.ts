@@ -1,8 +1,8 @@
-import { AlertService } from './../alert/alert.service';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { Platform } from '@ionic/angular';
-import { FCM } from '../../../plugins/cordova-plugin-fcm-with-dependecy-updated/ionic/ngx/FCM';
+import { AlertService } from "./../alert/alert.service";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { Platform } from "@ionic/angular";
+import { FCM } from "../../../plugins/cordova-plugin-fcm-with-dependecy-updated/ionic/ngx/FCM";
 
 @Injectable()
 export class PushNotificationService {
@@ -21,14 +21,14 @@ export class PushNotificationService {
   ) {}
 
   initializePush() {
-    if (this.platform.is('cordova')) {
+    if (this.platform.is("cordova")) {
       // this.loadPhoneDetails();
       this.listenerPush();
       this.fcm.getToken().then(async (token: string | null) => {
         if (token !== null && token.length > 0) {
           // await this.storage.set('push_token', token);
           this.token = token;
-          // this.postPushDetails();
+          this.postPushDetails();
         }
       });
       this.fcm
@@ -37,7 +37,7 @@ export class PushNotificationService {
           if (tokenRefresh !== null && tokenRefresh.length > 0) {
             // await this.storage.set('push_token', tokenRefresh);
             this.token = tokenRefresh;
-            // this.postPushDetails();
+            this.postPushDetails();
           }
         });
     }
@@ -61,30 +61,32 @@ export class PushNotificationService {
   //   this.model = this.device.model;
   // }
 
-  // postPushDetails() {
-  //   this.appVersion.getVersionNumber().then((version) => {
-  //     this.connectSvc
-  //       .create('push_tokens', {
-  //         push_token: {
-  //           token: this.token,
-  //           uuid: this.device.uuid,
-  //           version: this.device.version,
-  //           manufacturer: this.device.manufacturer,
-  //           model: this.device.model,
-  //           platform: this.device.platform,
-  //           app_version: version,
-  //         },
-  //       })
-  //       .subscribe();
-  //   });
-  // }
+  postPushDetails() {
+    console.log('****************');
+    console.log(this.token);
+    // this.appVersion.getVersionNumber().then((version) => {
+    //   this.connectSvc
+    //     .create('push_tokens', {
+    //       push_token: {
+    //         token: this.token,
+    //         uuid: this.device.uuid,
+    //         version: this.device.version,
+    //         manufacturer: this.device.manufacturer,
+    //         model: this.device.model,
+    //         platform: this.device.platform,
+    //         app_version: version,
+    //       },
+    //     })
+    //     .subscribe();
+    // });
+  }
 
   listenerPush() {
     // if (this.platform.is('ios')) {
     //   this.fcm.requestPushPermissionIOS();
     // }
     this.fcm.onNotification().subscribe((data) => {
-      if (this.platform.is('ios')) {
+      if (this.platform.is("ios")) {
         // IOS data
         //   {
         //     aps: {
@@ -132,17 +134,17 @@ export class PushNotificationService {
     body: string
   ) {
     if (content_id) {
-      if (this.router.url === '/tabs/home') {
-        this.alertSvc.presentConfirmation(title, '', body).then((option) => {
+      if (this.router.url === "/tabs/home") {
+        this.alertSvc.presentConfirmation(title, "", body).then((option) => {
           if (option.option) {
             this.router.navigateByUrl(`/preview/${content_id}`);
           }
         });
       } else {
-        this.router.navigateByUrl('/tabs/home');
+        this.router.navigateByUrl("/tabs/home");
       }
     } else {
-      this.alertSvc.presentAlert(title, '', body, 'Dismiss');
+      this.alertSvc.presentAlert(title, "", body, "Dismiss");
     }
   }
 
@@ -152,13 +154,13 @@ export class PushNotificationService {
     body: string
   ) {
     if (content_id) {
-      this.alertSvc.presentConfirmation(title, '', body).then((option) => {
+      this.alertSvc.presentConfirmation(title, "", body).then((option) => {
         if (option.option) {
           this.router.navigateByUrl(`/preview/${content_id}`);
         }
       });
     } else {
-      this.alertSvc.presentAlert(title, '', body, `Dismiss`);
+      this.alertSvc.presentAlert(title, "", body, `Dismiss`);
     }
   }
 }
