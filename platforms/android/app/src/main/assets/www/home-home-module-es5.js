@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title> Example Notifications </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Example Notifications</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n\r\n  <div id=\"container\" class=\"ion-padding\">\r\n    <form #form=\"ngForm\">\r\n      <ion-list>\r\n        <ion-item>\r\n          <ion-label>Number of Notifications</ion-label>\r\n          <ion-input\r\n            name=\"numOfNotifications\"\r\n            type=\"number\"\r\n            step=\"1\"\r\n            min=\"1\"\r\n            max=\"100\"\r\n            required\r\n            [(ngModel)]=\"numOfNotifications\"\r\n          ></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-label>Interval in minutes</ion-label>\r\n          <ion-input\r\n            name=\"intervalInMinutes\"\r\n            type=\"number\"\r\n            step=\"1\"\r\n            min=\"1\"\r\n            required\r\n            [(ngModel)]=\"intervalInMinutes\"\r\n          ></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-label>Priority</ion-label>\r\n          <ion-select\r\n            name=\"priority\"\r\n            type=\"number\"\r\n            required\r\n            [(ngModel)]=\"priority\"\r\n          >\r\n          <ion-select-option [value]=\"-2\">Min</ion-select-option>\r\n          <ion-select-option [value]=\"-1\">Low</ion-select-option>\r\n          <ion-select-option [value]=\"0\">Default</ion-select-option>\r\n          <ion-select-option [value]=\"1\">High</ion-select-option>\r\n          <ion-select-option [value]=\"2\">Max</ion-select-option>\r\n        </ion-select>\r\n        </ion-item>\r\n      </ion-list>\r\n    </form>\r\n\r\n    <ion-button\r\n      color=\"primary\"\r\n      expand=\"block\"\r\n      [disabled]=\"form.invalid || $any(form.controls.intervalInMinutes?.value) < 1 || $any(form.controls.numOfNotifications?.value) < 1\"\r\n      (click)=\"schedule()\"\r\n      >Schedule {{numOfNotifications}}</ion-button\r\n    >\r\n    <ion-button color=\"danger\" expand=\"block\" (click)=\"cancelAll()\">Cancel All</ion-button>\r\n  </div>\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title> Example Notifications </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Example Notifications</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n\r\n  <div id=\"container\" class=\"ion-padding\">\r\n    <form #form=\"ngForm\">\r\n      <ion-list>\r\n        <ion-item>\r\n          <ion-label>Number of Notifications</ion-label>\r\n          <ion-input\r\n            name=\"numOfNotifications\"\r\n            type=\"number\"\r\n            step=\"1\"\r\n            min=\"1\"\r\n            max=\"100\"\r\n            required\r\n            [(ngModel)]=\"numOfNotifications\"\r\n          ></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-label>Interval in minutes</ion-label>\r\n          <ion-input\r\n            name=\"intervalInMinutes\"\r\n            type=\"number\"\r\n            step=\"1\"\r\n            min=\"1\"\r\n            required\r\n            [(ngModel)]=\"intervalInMinutes\"\r\n          ></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-label>Priority</ion-label>\r\n          <ion-select\r\n            name=\"priority\"\r\n            type=\"number\"\r\n            required\r\n            [(ngModel)]=\"priority\"\r\n          >\r\n            <ion-select-option [value]=\"-2\">Min</ion-select-option>\r\n            <ion-select-option [value]=\"-1\">Low</ion-select-option>\r\n            <ion-select-option [value]=\"0\">Default</ion-select-option>\r\n            <ion-select-option [value]=\"1\">High</ion-select-option>\r\n            <ion-select-option [value]=\"2\">Max</ion-select-option>\r\n          </ion-select>\r\n        </ion-item>\r\n      </ion-list>\r\n    </form>\r\n\r\n    <ion-button\r\n      color=\"primary\"\r\n      expand=\"block\"\r\n      [disabled]=\"form.invalid || $any(form.controls.intervalInMinutes?.value) < 1 || $any(form.controls.numOfNotifications?.value) < 1\"\r\n      (click)=\"schedule()\"\r\n      >Schedule {{numOfNotifications}}</ion-button\r\n    >\r\n    <ion-button color=\"danger\" expand=\"block\" (click)=\"cancelAll()\"\r\n      >Cancel All</ion-button\r\n    >\r\n    <br /><br /><br />\r\n    <ion-button\r\n      color=\"primary\"\r\n      expand=\"block\"\r\n      (click)=\"isIgnoringBatteryOptimizations()\"\r\n      >isIgnoringBatteryOptimizations</ion-button\r\n    >\r\n    <ion-button color=\"primary\" expand=\"block\" (click)=\"requestOptimizations()\"\r\n      >requestOptimizations</ion-button\r\n    >\r\n    <ion-button\r\n      color=\"primary\"\r\n      expand=\"block\"\r\n      (click)=\"requestOptimizationsMenu()\"\r\n      >requestOptimizationsMenu</ion-button\r\n    >\r\n    <!-- <ion-button color=\"primary\" expand=\"block\" (click)=\"isIgnoringDataSaver()\"\r\n      >IsIgnoringDataSaver</ion-button\r\n    > -->\r\n    <ion-button color=\"primary\" expand=\"block\" (click)=\"requestDataSaverMenu()\"\r\n      >requestDataSaverMenu</ion-button\r\n    >\r\n    <ion-button\r\n      color=\"primary\"\r\n      expand=\"block\"\r\n      (click)=\"haveProtectedAppsCheck()\"\r\n      >haveProtectedAppsCheck</ion-button\r\n    >\r\n    <ion-button color=\"primary\" expand=\"block\" (click)=\"protectedAppCheck()\"\r\n      >protectedAppCheck</ion-button\r\n    >\r\n  </div>\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -207,21 +207,28 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _services_alert_alert_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./../../services/alert/alert.service */
+      "./src/services/alert/alert.service.ts");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @ionic-native/local-notifications/ngx */
       "./node_modules/@ionic-native/local-notifications/__ivy_ngcc__/ngx/index.js");
 
       var HomePage = /*#__PURE__*/function () {
-        function HomePage(localNotification) {
+        function HomePage(localNotification, alertSvc) {
           _classCallCheck(this, HomePage);
 
           this.localNotification = localNotification;
+          this.alertSvc = alertSvc;
           this.numOfNotifications = 20;
           this.intervalInMinutes = 1;
           this.priority = 0;
@@ -269,6 +276,81 @@
               }, _callee, this);
             }));
           }
+        }, {
+          key: "isIgnoringBatteryOptimizations",
+          value: function isIgnoringBatteryOptimizations() {
+            var _this = this;
+
+            cordova.plugins.PowerOptimization.IsIgnoringBatteryOptimizations().then(function (result) {
+              console.log('******' + 'isIgnoringBatteryOptimizations');
+              console.log(result);
+
+              _this.alertSvc.presentAlert('', '', result, '');
+            }, function (err) {
+              console.error(err);
+            });
+          }
+        }, {
+          key: "requestOptimizationsMenu",
+          value: function requestOptimizationsMenu() {
+            cordova.plugins.PowerOptimization.RequestOptimizationsMenu().then(function (result) {
+              console.log('******' + 'requestOptimizationsMenu');
+              console.log(result);
+            }, function (err) {
+              console.error(err);
+            });
+          }
+        }, {
+          key: "requestOptimizations",
+          value: function requestOptimizations() {
+            cordova.plugins.PowerOptimization.RequestOptimizations().then(function (result) {
+              console.log('******' + 'requestOptimizations');
+              console.log(result);
+            }, function (err) {
+              console.error(err);
+            });
+          } // isIgnoringDataSaver() {
+          //   (cordova as any).plugins.PowerOptimization.IsIgnoringDataSaver().then(
+          //     (result: any) => {
+          //       console.log('******' + 'isIgnoringDataSaver');
+          //       console.log(result);
+          //     },
+          //     (err: any) => {
+          //       console.error(err);
+          //     }
+          //   );
+          // }
+
+        }, {
+          key: "requestDataSaverMenu",
+          value: function requestDataSaverMenu() {
+            cordova.plugins.PowerOptimization.RequestDataSaverMenu().then(function (result) {
+              console.log('******' + 'requestDataSaverMenu');
+              console.log(result);
+            }, function (err) {
+              console.error(err);
+            });
+          }
+        }, {
+          key: "haveProtectedAppsCheck",
+          value: function haveProtectedAppsCheck() {
+            cordova.plugins.PowerOptimization.HaveProtectedAppsCheck().then(function (result) {
+              console.log('******' + 'haveProtectedAppsCheck');
+              console.log(result);
+            }, function (err) {
+              console.error(err);
+            });
+          }
+        }, {
+          key: "protectedAppCheck",
+          value: function protectedAppCheck() {
+            cordova.plugins.PowerOptimization.ProtectedAppCheck().then(function (result) {
+              console.log('******' + 'protectedAppCheck');
+              console.log(result);
+            }, function (err) {
+              console.error(err);
+            });
+          }
         }]);
 
         return HomePage;
@@ -276,11 +358,13 @@
 
       HomePage.ctorParameters = function () {
         return [{
-          type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_2__["LocalNotifications"]
+          type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_3__["LocalNotifications"]
+        }, {
+          type: _services_alert_alert_service__WEBPACK_IMPORTED_MODULE_1__["AlertService"]
         }];
       };
 
-      HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-home',
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
         /*! raw-loader!./home.page.html */

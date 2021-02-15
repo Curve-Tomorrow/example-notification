@@ -45,12 +45,12 @@
             required
             [(ngModel)]="priority"
           >
-          <ion-select-option [value]="-2">Min</ion-select-option>
-          <ion-select-option [value]="-1">Low</ion-select-option>
-          <ion-select-option [value]="0">Default</ion-select-option>
-          <ion-select-option [value]="1">High</ion-select-option>
-          <ion-select-option [value]="2">Max</ion-select-option>
-        </ion-select>
+            <ion-select-option [value]="-2">Min</ion-select-option>
+            <ion-select-option [value]="-1">Low</ion-select-option>
+            <ion-select-option [value]="0">Default</ion-select-option>
+            <ion-select-option [value]="1">High</ion-select-option>
+            <ion-select-option [value]="2">Max</ion-select-option>
+          </ion-select>
         </ion-item>
       </ion-list>
     </form>
@@ -62,6 +62,39 @@
       (click)="schedule()"
       >Schedule {{numOfNotifications}}</ion-button
     >
-    <ion-button color="danger" expand="block" (click)="cancelAll()">Cancel All</ion-button>
+    <ion-button color="danger" expand="block" (click)="cancelAll()"
+      >Cancel All</ion-button
+    >
+    <br /><br /><br />
+    <ion-button
+      color="primary"
+      expand="block"
+      (click)="isIgnoringBatteryOptimizations()"
+      >isIgnoringBatteryOptimizations</ion-button
+    >
+    <ion-button color="primary" expand="block" (click)="requestOptimizations()"
+      >requestOptimizations</ion-button
+    >
+    <ion-button
+      color="primary"
+      expand="block"
+      (click)="requestOptimizationsMenu()"
+      >requestOptimizationsMenu</ion-button
+    >
+    <!-- <ion-button color="primary" expand="block" (click)="isIgnoringDataSaver()"
+      >IsIgnoringDataSaver</ion-button
+    > -->
+    <ion-button color="primary" expand="block" (click)="requestDataSaverMenu()"
+      >requestDataSaverMenu</ion-button
+    >
+    <ion-button
+      color="primary"
+      expand="block"
+      (click)="haveProtectedAppsCheck()"
+      >haveProtectedAppsCheck</ion-button
+    >
+    <ion-button color="primary" expand="block" (click)="protectedAppCheck()"
+      >protectedAppCheck</ion-button
+    >
   </div>
 </ion-content>
