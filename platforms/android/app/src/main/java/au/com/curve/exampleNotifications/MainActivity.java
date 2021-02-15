@@ -20,6 +20,10 @@
 package au.com.curve.exampleNotifications;
 
 import android.os.Bundle;
+import android.util.Log;
+
+import com.judemanutd.autostarter.AutoStartPermissionHelper;
+
 import org.apache.cordova.*;
 
 public class MainActivity extends CordovaActivity
@@ -34,6 +38,9 @@ public class MainActivity extends CordovaActivity
         if (extras != null && extras.getBoolean("cdvStartInBackground", false)) {
             moveTaskToBack(true);
         }
+
+        AutoStartPermissionHelper.getInstance().getAutoStartPermission(getApplicationContext());
+        Log.i("MainActivity", String.valueOf(AutoStartPermissionHelper.getInstance().isAutoStartPermissionAvailable(getApplicationContext())));
 
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);

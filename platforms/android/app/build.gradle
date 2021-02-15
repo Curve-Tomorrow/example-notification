@@ -356,6 +356,7 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     implementation "androidx.annotation:annotation:1.1.0"
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "com.github.judemanutd:autostarter:1.0.8"
     // SUB-PROJECT DEPENDENCIES END
 }
 
