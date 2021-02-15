@@ -49,6 +49,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-power-optimization.PowerOptimization",
+      "file": "plugins/cordova-plugin-power-optimization/www/PowerOptimization.js",
+      "pluginId": "cordova-plugin-power-optimization",
+      "clobbers": [
+        "cordova.plugins.PowerOptimization"
+      ]
+    },
+    {
       "id": "cordova-plugin-splashscreen.SplashScreen",
       "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
       "pluginId": "cordova-plugin-splashscreen",
@@ -73,6 +81,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "4.2.1",
     "cordova-plugin-local-notification": "0.9.0-beta.3",
+    "cordova-plugin-power-optimization": "0.0.3",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-whitelist": "1.3.3"
