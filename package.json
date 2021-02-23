@@ -39,6 +39,7 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "battery-optimizer-plugin": "git+https://github.com/Curve-Tomorrow/BatteryOptimizerPlugin.git",
     "codelyzer": "^6.0.0",
     "cordova-android": "^9.0.0",
     "cordova-plugin-badge": "^0.8.8",
@@ -69,7 +70,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-ionic-webview": {}
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-battery-optimizer": {}
     },
     "platforms": [
       "android",

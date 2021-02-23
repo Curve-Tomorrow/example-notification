@@ -55,6 +55,12 @@ export class HomePage {
     this.setBatteryOptimisationStatus(granted);
   }
 
+  async openSettings() {
+    await this.platform.ready();
+    if (!this.platform.is('android')) return;
+    await openAppSettings();
+  }
+
   private async checkAndSetBatteryOptimisationStatus() {
     await this.platform.ready();
     if (!this.platform.is('android')) return;
@@ -80,5 +86,11 @@ function requestIgnoringBatteryOptimization() {
     (window as any).cordova.plugins.notification.local.requestIgnoreBatteryOptimizations(
       (granted: boolean) => resolve(granted)
     );
+  });
+}
+
+function openAppSettings() {
+  return new Promise<void>((resolve, reject) => {
+    (window as any).BatteryOptimizerPlugin.openAppSettings(resolve, reject);
   });
 }

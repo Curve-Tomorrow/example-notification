@@ -45,18 +45,23 @@
             required
             [(ngModel)]="priority"
           >
-          <ion-select-option [value]="-2">Min</ion-select-option>
-          <ion-select-option [value]="-1">Low</ion-select-option>
-          <ion-select-option [value]="0">Default</ion-select-option>
-          <ion-select-option [value]="1">High</ion-select-option>
-          <ion-select-option [value]="2">Max</ion-select-option>
-        </ion-select>
+            <ion-select-option [value]="-2">Min</ion-select-option>
+            <ion-select-option [value]="-1">Low</ion-select-option>
+            <ion-select-option [value]="0">Default</ion-select-option>
+            <ion-select-option [value]="1">High</ion-select-option>
+            <ion-select-option [value]="2">Max</ion-select-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <ion-label>Battery Optimisation ({{batteryOptimisation}})</ion-label>
         </ion-item>
       </ion-list>
-      <ion-button color="primary" (click)="requestIgnoreBatteryOptimisation()">Request to ignore</ion-button>
+      <ion-button color="primary" (click)="requestIgnoreBatteryOptimisation()"
+        >Request to ignore</ion-button
+      >
+      <ion-button color="primary" (click)="openSettings()"
+        >Open Settings</ion-button
+      >
     </form>
 
     <ion-button
@@ -66,6 +71,8 @@
       (click)="schedule()"
       >Schedule {{numOfNotifications}}</ion-button
     >
-    <ion-button color="danger" expand="block" (click)="cancelAll()">Cancel All</ion-button>
+    <ion-button color="danger" expand="block" (click)="cancelAll()"
+      >Cancel All</ion-button
+    >
   </div>
 </ion-content>
